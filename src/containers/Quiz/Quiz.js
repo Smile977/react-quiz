@@ -5,8 +5,8 @@ import FinishedQuiz from '../../componesnts/FinishedQuiz/FinishedQuiz'
 
 class Quiz extends Component {
     state = {
-        results: {}, // { [id]: 'success' / 'error' }
         isFinished: false,
+        results: {}, // { [id]: 'success' / 'error' }
         activeQuestion: 0,
         answerState: null, // { [id]: 'success' / 'error' }
         quiz: [
@@ -89,6 +89,10 @@ class Quiz extends Component {
             isFinished: false,
             results: {}
         })
+    }
+
+    componentDidMount() {
+        console.log('Quiz ID = ', this.props.match.params.id)
     }
 
     render() {
