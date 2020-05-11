@@ -50,7 +50,6 @@ class Drawer extends Component{
             </React.Fragment>
         )
     }
-
 }
 
 export default Drawer

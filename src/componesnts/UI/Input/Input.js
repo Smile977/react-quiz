@@ -1,8 +1,8 @@
 import React from 'react'
 import classes from './Input.module.css'
 
-function isInvalid({valid, touched, sholdValidate}) {
-    return !valid && sholdValidate && touched
+function isInvalid({valid, touched, shouldValidate}) {
+    return !valid && shouldValidate && touched
 }
 
 const Input = props => {
@@ -20,7 +20,7 @@ const Input = props => {
             <label htmlFor={htmlFor}>{props.label}</label>
             <input
                 type={inputType}
-                Id={htmlFor}
+                id={htmlFor}
                 value={props.value}
                 onChange={props.onChange}
             />
